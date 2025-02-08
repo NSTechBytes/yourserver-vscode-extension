@@ -1,65 +1,86 @@
-# yourserver README
+# YourServer - VS Code Extension
 
-This is the README for your extension "yourserver". After writing up a brief description, we recommend including the following sections.
+YourServer is a lightweight Visual Studio Code extension that provides an easy way to launch a local development server with live reloading. It is built using `live-server` and allows you to preview HTML files instantly.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- One-click start/stop server from the status bar.
+- Automatically finds an available port (starting from `5500`).
+- Opens your project in the browser automatically.
+- Supports live reloading when files change.
+- Works from both the Explorer and Editor context menus.
 
-For example if there is an image subfolder under your extension project workspace:
+## Installation
 
-\!\[feature X\]\(images/feature-x.png\)
+1. Open VS Code.
+2. Go to **Extensions** (`Ctrl+Shift+X` or `Cmd+Shift+X` on macOS).
+3. Search for `YourServer`.
+4. Click **Install**.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+Alternatively, install via the command line:
+
+```sh
+code --install-extension NSTechBytes.yourserver
+```
+## Preview
+![Preview Screenshot](./images/screenshots/preview.gif)
+
+
+## Usage
+
+### Start the Server
+
+- Click on the **Start Server** button in the status bar.
+- Or right-click in the **Explorer** or **Editor** and select **Start YourServer**.
+
+![Status Bar Screenshot](./images/screenshots/statusbar.png)
+
+### Stop the Server
+
+- Click on the **Stop Server** button in the status bar.
+- Or right-click in the **Explorer** or **Editor** and select **Stop YourServer**.
+
+![Context Menu Screenshot](./images/screenshots/context.png)
+
+## Commands
+
+| Command              | Description             |
+| -------------------- | ----------------------- |
+| `yourserver.start` | Starts the local server |
+| `yourserver.stop`  | Stops the server        |
+
+## Configuration
+
+YourServer automatically detects an available port starting from `5500`. You can modify the default behavior in future updates by adding settings support.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- Visual Studio Code `v1.97.0` or later.
 
-## Extension Settings
+## Repository
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+[GitHub Repository](https://github.com/NSTechBytes/yourserver-vscode-extension)
 
-For example:
+## Issues & Feedback
 
-This extension contributes the following settings:
+If you encounter any issues or have feature requests, please open an issue on [GitHub Issues](https://github.com/NSTechBytes/yourserver-vscode-extension/issues).
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## License
 
-## Known Issues
+This extension is licensed under the Apache License.
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
 
-## Release Notes
+## Contribution 🤝
 
-Users appreciate release notes as you update your extension.
+Feel free to contribute to the development of RainSyntax! Follow these steps:
 
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+1. Fork this repository.
+2. Clone the forked repository to your local machine.
+3. Make your changes and test them.
+4. Create a pull request explaining your changes.
 
 ---
 
-## Working with Markdown
+## Feedback and Support 📩
 
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+If you encounter any issues or have suggestions for improvement, please [open an issue](https://github.com/NSTechBytes/yourserver-vscode-extension/issues) on GitHub. Your feedback is invaluable!
