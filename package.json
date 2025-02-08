@@ -1,0 +1,74 @@
+{
+  "name": "yourserver",
+  "displayName": "YourServer",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:yourserver.start",
+    "onCommand:yourserver.stop",
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "yourserver.start",
+        "title": "Start YourServer"
+      },
+      {
+        "command": "yourserver.stop",
+        "title": "Stop YourServer"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "yourserver.start",
+          "when": "editorLangId == html",
+          "group": "navigation"
+        },
+        {
+          "command": "yourserver.stop",
+          "when": "editorLangId == html",
+          "group": "navigation"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "yourserver.start",
+          "group": "navigation"
+        },
+        {
+          "command": "yourserver.stop",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.97.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.19.0"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2",
+    "open": "^10.1.0",
+    "ws": "^8.18.0"
+  }
+}
