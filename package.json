@@ -1,7 +1,7 @@
 {
   "name": "yourserver",
   "displayName": "YourServer",
-  "description": "YourServer is a lightweight Visual Studio Code extension that provides an easy way to launch a local development server with live reloading. It is built using `live-server` and allows you to preview HTML files instantly.",
+  "description": "YourServer is a lightweight Visual Studio Code extension that provides an easy way to launch a local development server.",
   "version": "0.0.1",
   "publisher": "NSTechBytes",
   "icon": "images/yourserver.png",
